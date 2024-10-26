@@ -3,6 +3,9 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+Use Livewire\Attributes\Title;
+
+#[Title('about')]
 
 class About extends Component
 {
