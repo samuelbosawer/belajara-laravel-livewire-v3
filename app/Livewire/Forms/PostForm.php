@@ -21,6 +21,8 @@ class PostForm extends Form
 
          $user->posts()->create($this->validate());
          $this->reset();
+
+         flash('Post created successfully', 'success');
     }
 
 }
