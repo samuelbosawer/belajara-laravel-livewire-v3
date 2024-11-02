@@ -5,3 +5,6 @@ https://www.youtube.com/watch?v=4pO4duDkMl4&list=PLRKMmwY3-5MxAteFCtjLc0cfFU7a5Q
 
 ## Buat layout livewire
 php artisan livewire:layout
+
+## Melihat perintah livewire 
+php artisan list livewire

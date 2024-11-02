@@ -7,20 +7,11 @@ use Livewire\Component;
 class Create extends Component
 {
 
-    #[\Livewire\Attributes\Rule(['required','min:3','max:255'])]
-    public string $title = '';
-
-    #[\Livewire\Attributes\Rule(['required'])]
-    public string $body = '';
+    public \App\Livewire\Forms\PostForm $form;
 
     public function save()
     {
-        $user = \App\Models\User::find(1);
-
-       $validated = $this->validate();
-
-        $user->posts()->create($validated);
-        $this->reset();
+        $this->form->store();
     }
 
     public function render()
