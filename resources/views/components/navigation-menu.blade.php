@@ -14,6 +14,25 @@
 
         </ul>
 
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        @auth
+
+        <form action="{{route('logout')}}" method="POST">
+            @csrf
+            <button type="submit" class="btn btn-primary">
+                Log Out
+            </button>
+        </form>
+            @else
+
+
+
+                <x-nav-link :active="request()->routeIs('login')" href="/login"> Login </x-nav-link>
+
+
+                @endauth
+            </ul>
+
       </div>
     </div>
   </nav>
