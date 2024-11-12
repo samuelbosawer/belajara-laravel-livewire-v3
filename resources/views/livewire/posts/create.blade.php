@@ -3,24 +3,16 @@
 <x-flash-message/>
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">
+            {{-- <h5 class="card-title">
                 New Post
-            </h5>
+            </h5> --}}
 
             <form action="" wire:submit="save">
-                <div class="mb-4">
-                    <label for="title" class="form-label">Title</label>
 
-                    <input id="title" wire:model="form.title" class="form-control">
+                <div class="mb-2">
+                    <label for="body" class="form-label visually-hidden">Body</label>
 
-                    @error('form.title')
-                        <small class="text-danger d-block mt-1">{{ $message }}</small>
-                    @enderror
-                </div>
-                <div class="mb-4">
-                    <label for="body" class="form-label">Body</label>
-
-                    <textarea wire:model="form.body" class="form-control" id=body rows="3"></textarea>
+                    <textarea wire:model="form.body" placeholder="What's on your mind ?" class="form-control" id=body ></textarea>
 
                     @error('form.body')
                         <small class="text-danger d-block mt-1">{{ $message }}</small>
