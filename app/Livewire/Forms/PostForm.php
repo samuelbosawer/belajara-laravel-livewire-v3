@@ -22,6 +22,6 @@ class PostForm extends Form
 
         return $post;
 
-    }
+}
 
 }

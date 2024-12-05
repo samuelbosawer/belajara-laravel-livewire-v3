@@ -9,7 +9,7 @@
 
 
           <x-nav-link :active="request()->routeIs('home')" href="{{route('home')}}"> Home </x-nav-link>
-          <x-nav-link :active="request()->routeIs('posts.*')" href="/posts"> Posts </x-nav-link>
+          <x-nav-link :active="request()->routeIs('timeline,*')" href="/timeline"> Timeline </x-nav-link>
 
 
         </ul>
