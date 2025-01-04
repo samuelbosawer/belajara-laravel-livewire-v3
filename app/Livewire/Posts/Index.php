@@ -10,7 +10,6 @@ use Livewire\Attributes\Lazy;
 
 #[Title('Lazy')]
 
-// #[Title('Posts')]
 
 class Index extends Component
 {
@@ -34,7 +33,7 @@ class Index extends Component
     public function render()
     {
 
-        sleep(3);
+        // sleep(3);
         return view(
             'livewire.posts.index',
             ['posts' => Post::query()->latest()->get()]
